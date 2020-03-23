@@ -34,7 +34,7 @@
           </div>
 
           <!-- Country Cards-->
-          <TrackingCard v-for="country in filterCountries" :key="country.id" @country="country" />
+          <TrackingCard v-for="country in filterCountries" :key="country.id" :country="country" />
         </div>
       </div>
     </div>
@@ -74,7 +74,7 @@ export default {
       return this.$store.state.countriesLoading;
     },
     countries() {
-      this.$store.state.countries;
+      return this.$store.state.countries;
     },
     searchIndicator: function() {
       if (this.isCalculating) {

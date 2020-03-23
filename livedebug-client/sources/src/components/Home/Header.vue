@@ -15,7 +15,9 @@
                         <span v-if="globals">
                           <b>Global :</b>
                           <span class="text-warning">{{ Number(globals.cases).toLocaleString() }}</span> confirmed -
-                          <span class="text-covid">{{ Number(globals.deaths).toLocaleString() }}</span> deaths -
+                          <span
+                            class="text-covid"
+                          >{{ Number(globals.deaths).toLocaleString() }}</span> deaths -
                           <span
                             class="text-success"
                           >{{ Number(globals.recovered).toLocaleString() }}</span> recoveries
@@ -112,7 +114,7 @@ export default {
       this.$store.dispatch("fetchGlobals");
     },
     fetchCountries() {
-      this.$store.commit("fetchCountries");
+      this.$store.dispatch("fetchCountries");
     }
   },
   created() {
