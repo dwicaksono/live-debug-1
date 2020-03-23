@@ -12,7 +12,7 @@ afterAll(done => {
 
 describe('Book Routes Test', () => {
   describe('Create new Books', () => {
-    test.only(`Should return status 201 and object of new book`, function (done) {
+    test(`Should return status 201 and object of new book`, function (done) {
       const data = {
         isbn: '9781593279509',
         title: 'Eloquent JavaScript',

@@ -64,11 +64,11 @@ export default {
   },
   methods: {
     fetchCountries() {
-      this.store.dispatch("fetchCountries");
+      this.$store.dispatch("fetchCountries");
     }
   },
-  created: {
-    // this.fetchCountries()
+  created() {
+    this.fetchCountries();
   },
   computed: {
     ...mapGetters(["getIndonesianCases"]),

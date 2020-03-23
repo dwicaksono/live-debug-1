@@ -12,8 +12,8 @@ class LoanController {
 
   static find(req, res, next) {
     Loan.findAll()
-      .then(result => {
-        res.status(200).json(result)
+      .then(function (loans) {
+        res.json(loans)
       })
       .catch(next(err));
   }
@@ -27,7 +27,7 @@ class LoanController {
         } else {
           loan.date_returned = new Date();
           loan.save().then(function () {
-            res.status(200).json({
+            res.json({
               message: 'Successfully returned'
             });
           });
