@@ -10,7 +10,7 @@ afterAll(done => {
     .catch(err => done(err));
 });
 
-describe('Book Routes Test', () => {
+describe.only('Book Routes Test', () => {
   describe('Create new Books', () => {
     test(`Should return status 201 and object of new book`, function (done) {
       const data = {
