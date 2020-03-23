@@ -1,9 +1,9 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
+import Router from 'vue-router'
 import Home from '../views/Home.vue'
 import Tracking from '../views/Tracking.vue'
 
-Vue.use(VuexRouter)
+Vue.use(Router)
 
 const routes = [
   {
@@ -18,7 +18,7 @@ const routes = [
   }
 ]
 
-const router = new VueRouter({
+const router = new Router({
   mode: 'history',
   linkActiveClass: 'active',
   linkExactActiveClass: 'exact-active',

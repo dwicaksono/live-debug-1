@@ -2,8 +2,15 @@
   <nav class="navbar navbar-expand-lg navbar-custom navbar-light">
     <div class="container">
       <router-link class="navbar-brand text-covid" to="/">COVID-19 Tracker</router-link>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -15,7 +22,7 @@
             <a class="nav-link" href="#tips" v-smooth-scroll>Tips</a>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" href="/tracking">Tracking</router-link>
+            <router-link class="nav-link" to="/tracking">Tracking</router-link>
           </li>
         </ul>
       </div>
@@ -25,13 +32,13 @@
 
 <script>
 export default {
-  name: 'Navbar',
+  name: "Navbar",
   computed: {
-    getRoute () {
-      return this.$route.path
+    getRoute() {
+      return this.$route.path;
     }
   }
-}
+};
 </script>
 
 <style scoped>

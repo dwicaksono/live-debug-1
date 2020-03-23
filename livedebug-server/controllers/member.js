@@ -4,10 +4,15 @@ class MemberController {
   static create(req, res, next) {
     const { name, address, zipcode, email, phone_number } = req.body;
     Member.create({ name, address, zipcode, email, phone_number })
-      .then(function(newMember) {
-        res.status(201).json(newMember);
+      // .then(function (newMember) {
+      //   res.status(201).json(newMember);
+      // })
+      .then(result => {
+        res.status(201).json(result)
       })
-      .catch(next);
+      .catch(err => {
+        next(err)
+      })
   }
 }
 

@@ -1,28 +1,28 @@
 <template>
   <div>
     <!-- Header -->
-    <Header/>
+    <Header />
 
     <!-- Cases in Indonesia -->
-    <Cases/>
+    <Cases />
 
     <!-- Tips -->
-    <Tips/>
-
+    <Tips />
   </div>
 </template>
-
-<style>
-import Header from '../components/Home/Header'
-import Cases from '../components/Home/Cases'
-import Tips from '../components/Home/Tips'
+<script>
+import Header from "../components/Home/Header";
+import Cases from "../components/Home/Cases";
+import Tips from "../components/Home/Tips";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     Header,
     Cases,
     Tips
   }
-}
+};
+</script>
+<style>
 </style>
